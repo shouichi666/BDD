@@ -1,21 +1,17 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import InputContents from "./components/InputContents";
-import ss from "./components/ss";
-import Nav from "./components/Nav";
-
-import reportWebVitals from "./reportWebVitals";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <InputContents />
-    <Nav />
+    <App />
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
 
-<ss />;
+
+// {/* <ss />; */}
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// reportWebVitals();

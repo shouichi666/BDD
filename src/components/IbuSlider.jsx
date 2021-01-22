@@ -36,19 +36,17 @@ const IbuSlider = (props) => {
     if (value === 0) {
       return "none";
     } else if (1 < value && value <= 5) {
-      return "フルーティー";
+      return "fruity";
     } else if (5 < value && value <= 20) {
-      return "軽め";
+      return "light";
     } else if (20 < value && value <= 40) {
-      return "普通";
+      return "nomal";
     } else if (40 < value && value <= 100) {
-      return "苦め";
+      return "bitter";
     } else if (100 < value && value <= 140) {
-      return "苦い";
+      return "heavy";
     } else if (140 < value) {
-      return "マニア向け";
-    } else if (value === 0) {
-      return "検索なし";
+      return "maniac";
     }
   };
 

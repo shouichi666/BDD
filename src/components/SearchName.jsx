@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function StateTextFields(props) {
+ const SearchName = (props) => {
   const classes = useStyles();
 
   return (
@@ -30,3 +30,5 @@ export default function StateTextFields(props) {
     </form>
   );
 }
+
+export default SearchName

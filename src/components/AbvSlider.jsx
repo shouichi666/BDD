@@ -43,17 +43,18 @@ function valuetext(value) {
   return value;
 }
 
-export default function DiscreteSlider(props) {
+export default function AbvSlider(props) {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       {valuetext()}
       <Typography id="discrete-slider-custom" gutterBottom>
-        ABV {props.value} %
+        Alcohol {props.value} %
       </Typography>
       <Slider
-        value={props.value}
+        defaultValue={5}
+        value={props.abv}
         onChange={props.onChange}
         getAriaValueText={valuetext}
         aria-valuemax={20}

@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SelectMolt(props) {
+const SelectMolt = (props) => {
   const classes = useStyles();
 
 
@@ -91,3 +91,6 @@ export default function SelectMolt(props) {
     </div>
   );
 }
+
+
+export default SelectMolt

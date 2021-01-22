@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function SelectHop(props) {
+const SelectHop = (props) => {
   const classes = useStyles();
 
   const hopList = [
@@ -97,3 +97,6 @@ export default function SelectHop(props) {
     </div>
   );
 }
+
+
+export default SelectHop
