@@ -1,11 +1,11 @@
 import React from "react";
 import ViewBox from "./ViewBox";
-// import { useHistory } from "react-router-dom";
 
 const ViewList = (props) => {
-  // const history = useHistory();
   let moreButton = "ViewList__moreButton";
+
   props.res === true ? (moreButton += "") : (moreButton += "None");
+
   const items = props.data.map((item, index) => {
     let key = index;
     return (

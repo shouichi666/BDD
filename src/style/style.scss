@@ -15,6 +15,22 @@ body {
   background-color: $mainColor;
 }
 
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 400;
+}
+
+p {
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: #14283f;
+}
+
 li {
   list-style: none;
 }
@@ -52,6 +68,7 @@ input[type="checkbox"] {
 .nomalButton {
   width: 170px;
   margin: 10px auto 0;
+  text-align: center;
 }
 .btn-gradient-simple {
   display: inline-block;
@@ -69,7 +86,27 @@ input[type="checkbox"] {
 }
 
 .View {
-  padding: 0 0 45px 0;
+  position: relative;
+  padding: 0 0 45px;
+
+  &__deleteButton {
+    display: inline-block;
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    button[type="button"] {
+      border: none;
+    }
+  }
+
+  h1 {
+    display: inline-block;
+    margin: 0 0 30px 10px;
+    padding: 10px 30px;
+    font-size: 22px;
+    background-color: #160303e8;
+    color: white;
+  }
 }
 
 .ViewList {
@@ -204,7 +241,7 @@ input[type="checkbox"] {
     position: relative;
     z-index: 20;
     padding: 30px 50px 30px 0px;
-    height: 250px;
+    height: 280px;
   }
 
   &__AbvIbu {
@@ -285,7 +322,6 @@ input[type="checkbox"] {
   position: absolute;
   bottom: 10px;
   right: 10px;
-  color: #97ec0e8e;
   font-size: 32px;
   transition: 0.2s;
 
@@ -297,25 +333,50 @@ input[type="checkbox"] {
     width: 100%;
     height: 100%;
   }
-
   &:active {
+    bottom: 22px;
     color: #fd934c56;
-    font-size: 35px;
   }
 }
 
-.iconON {
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  transform: translateY(-50%);
-  color: #ff0909;
-  font-size: 35px;
+.icon {
+  color: #099dff;
   transition: 0.2s;
+}
+.iconIsActive {
+  color: #ff0909;
+  transition: 0.2s;
+}
 
-  &:active {
-    color: #fd934c56;
-    font-size: 35px;
-  }
+.LoadingWarp {
+  width: 100%;
+  height: 100vh;
+  background-color: #14283f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flexTwo {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  margin: 30px 0 0 0;
+}
+.approvalButton,
+.cancelButton {
+  width: 49%;
+  padding: 1em 0;
+  color: white;
+  border-radius: 5px;
+}
+
+.approvalButton {
+  background-color: #4c84fd;
+}
+
+.cancelButton {
+  background-color: #f57e3ad7;
 }
 @import "_common";

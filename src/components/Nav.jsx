@@ -39,7 +39,7 @@ const Nav = (props) => {
   const history = useHistory();
 
   const linkToSearch = () => {
-    history.push("/search/");
+    history.push("/");
   };
   const linkToRandom = () => {
     history.push("/random/");
@@ -47,6 +47,7 @@ const Nav = (props) => {
   };
   const linkToFavorite = () => {
     history.push("/favorite/");
+    window.location.reload();
   };
 
   return (

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import RandomTemplate from "./RandomTemplate";
-// import { Route } from "react-router-dom";
-// import { useHistory } from "react-router-dom";
+import Loading from "./Loading";
 
 const Random = (props) => {
   const [random, setRandom] = useState([]);
@@ -14,12 +13,13 @@ const Random = (props) => {
         .then((json) => {
           setRandom(json[0]);
           setView(true);
-        });
+        })
+        .catch((error) => console.log("error"));
     }
-  });
+  }, [view]);
 
   if (view === false) {
-    return <p>loading</p>;
+    return <Loading/>;
   } else {
     return (
       <>

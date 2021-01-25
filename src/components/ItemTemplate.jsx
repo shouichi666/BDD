@@ -13,10 +13,12 @@ const backgroundStyle = {
 const ItemTemplate = (props) => {
   const item = props.item[0];
 
-  const pushLocalStorage = () => {
-    // let id = e.target.id;
-    localStorage.setItem(item.id, JSON.stringify(item));
-  };
+  let localStorageItems = Object.keys(localStorage).map((item, index) => {
+    return item;
+  });
+
+  let classN = "icon";
+  props.favorite ? (classN += "IsActive") : (classN += "");
 
   if (item === undefined) {
     return (
@@ -25,6 +27,11 @@ const ItemTemplate = (props) => {
       </div>
     );
   } else {
+    for (let i = 0; i < localStorageItems.length; i++) {
+      if (localStorageItems[i] === String(item.id)) {
+        props.judgmentFavorite();
+      }
+    }
     const foodPairings = item.food_pairing.map((foodPairing, index) => {
       return (
         <li className="acdItem" key={index}>
@@ -64,8 +71,12 @@ const ItemTemplate = (props) => {
             <span>IBU</span>
             <p>{item.ibu}</p>
           </div>
-          <div className="iconBox" id={item.id} onClick={pushLocalStorage}>
-            <FontAwesomeIcon icon={faBookmark} className="icon" />
+          <div
+            className="iconBox"
+            id={item.id}
+            onClick={props.pushLocalStorage}
+          >
+            <FontAwesomeIcon icon={faBookmark} className={classN} />
           </div>
         </section>
         <section className="ItemTemplate__bottom">
